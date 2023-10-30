@@ -1,0 +1,33 @@
+var o, p;
+o = [
+	Array.prNew(2),  Array.prNew(2),  "Mariel",  "//sine waves for the end of marie's piece
+
+var controls = In.kr(controlsBus, 10);
+
+
+var dist = controls[1].linlin(0,1,0.001,3);
+
+
+var sound = (LFTri.ar([60.5.midicps/4-dist, 60.5.midicps/4+dist], 0, 5)).tanh.softclip.sum.dup*controls[0].lincurve(0,1,0,0.25,4);
+
+sound = LPF.ar(sound, controls[2].linlin(0,1,100, 500));
+
+Out.ar(outBus, sound);",  
+	Array.prNew(2),  "Wubbels",  "//eric's amplitude modulate for the end of his modular piece
+
+var in = In.ar(inBus);
+var lfoSpeed = In.kr(controlsBus+1).linlin(0,1,10,20);
+
+var vol = In.kr(controlsBus);
+
+Out.ar(outBus, in.dup*SinOsc.ar(lfoSpeed).range(0,1)*vol);"
+];
+p = [
+	// Array
+	0, [ o[1],  o[4] ],  
+	// Array
+	1, [ o[2],  o[3] ],  
+	// Array
+	4, [ o[5],  o[6] ]
+];
+prUnarchive(o,p);
