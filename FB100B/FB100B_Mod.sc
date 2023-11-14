@@ -56,13 +56,13 @@ FB100B_Mod : Module_Mod {
 		numControls.do{arg func, i;
 			controls.add(TypeOSCFuncObject(this, oscMsgs, i, textList[i],
 				{arg val;
-					var synthNum = nButtons.buttonChange(i,val).postln;
+					var synthNum = nButtons.buttonChange(i,val);
 					if(val == 1){
-						synths[0].set(*data[synthNum.asSymbol].postln);
+						synths[0].set(*data[synthNum.asSymbol]);
 						synths[0].set(\env, 1);
 					}{
 						if (synthNum>0){
-							synths[0].set(*data[synthNum.asSymbol].postln)
+							synths[0].set(*data[synthNum.asSymbol])
 						}{
 							synths[0].set(\env, 0);
 						}
