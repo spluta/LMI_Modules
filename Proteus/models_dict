@@ -1,0 +1,670 @@
+var o, p;
+o = [
+	Dictionary.prNew,  Array.prNew(1024),  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Broadcast_Pedal_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Jekyl_and_Hyde_OD_DriveKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Fender_Bassman_JC.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Klone_SiGe_G6_T5_O7.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Bass_Dirt_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/HustleDriveLP_Knob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ENGL_Tube_Toner_E430.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/TS9_DriveKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/SoundCity50_LowGain_DIRECT.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Jeckyl_and_Hyde_Distortion_DriveKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DC3_Ge_G7_T5_L10.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BadCat50_MedGain_PREAMP.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/WildFire_Pedal_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Bogner_XTC_ Mini_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/MesaIICplus_Drive8_5EQoff.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/EffectrodeBlackbirdClassic.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Bass_Clean_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/SLO_Crunch_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/recModern_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/FriedmanSmallBox_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/GoatPedal_HighGain.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Klone_Ge_G9_T8_O6.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ElCoyote_Trainwreck_Crunch.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PrincetonAmp_Clean.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/NeuralJohnClean_DirectOut.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/UA_RubyKC_BoostKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Sovtek50_DodFX56B_DIRECT.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BassAmp_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PorkLoinPedal_LowGain.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/TRexMudhoney_plus_PorkLoin_HighGain.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PureSky_Pedal_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DigitechDF-7_Rat.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BlackstarHT40_GainKnob_SM57mic.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/SweetCream_pedal_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ProcoRatPedal_HighGain.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/WamplerThirtySomething15BoostON.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Klone_SiGe_G9_T8_O6.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PRS_Archon_Camo-flat_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/SLO_HighGain_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BlackstarHT40_AmpHighGain.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/JoyoBritishSound.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ShiftTwin_Clean2_PREAMP.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BadCat50_HighGain_DIRECT.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/JoyoExtremeMetalBoostOn.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DODAmericanMetal.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DigitechDF-7_BigMuff.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/AguilarAgro-Dark_Bass.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/TS9_HighDrive.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BigMuff_V6_T6_S9.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/TS7_modified_TS9Mode.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/TRexMudhoney_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ShiftTwin_StampedeDT_PREAMP.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Friedman_BEOD_Pedal_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/6505Plus_Red_DirectOut.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/WamplerAceThirtyFullGain.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/MatchlessSC30_Ch1_DirectOut.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/SLO_Clean_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Guvnor_Pedal_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DOD_AmericanMetalEQ_Knob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/EffectrodeBlackbirdCreamy.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/JoyoExtremeMetal.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BarberDD_Pedal_DriveKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DOD_Grunge_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DumbleKit_HighG_DirectOut.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DigitechDF-7_DS1.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/EthosLeadChan_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/1981_DistortionPedal_Knob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/MesaMiniRec_HighGain_DirectOut.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PrinceOfToneClone_Boost_Knob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PureSky_Pedal.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Klone_Ge_G5_T8_O7.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BlueClipper_Pedal_Clone.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Mesa_IICplus_DriveKnob_DirectOut.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/HustleDriveLP.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Supro_Bold_DriveKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BlackstarHT40_AmpClean.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DarkglassB7KUltra_EdoardoNapoli.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DigitechDF-7_MT2.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/AguilarAgro_and_B7KU-Behemoth_Bass.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DC3_Si_G10_T6_L9.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Djent_Amp_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PeaveyBandit_Chan1_saturated.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Sovtek50_MedGain_DIRECT.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Victory_CountessOD_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Benson_Chimera_clone_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DigitechDF-7_DOD250.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BluesJrAmp_VolKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ShiftTwin_Demon_PREAMP.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BigMuff_V6_T3_S5.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/RevvG4_Red_DriveKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/H&KBS200FL_CLEAN_EdoardoNapoli.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Lightspeed_PedalClone_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/EffectrodeBlackbirdCreamy_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Tubeworks_RealTube_DriveKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PrinceOfToneClone_OD_Knob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/HustleDriveHP.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/EffectrodeBlackbirdClean.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PrinceOfToneClone_Dist_Knob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Ibanez_Mostortion_Clone_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/WildFire_Pedal.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Sovtek50_Clean_DIRECT.json",  
+	Array.prNew(2),  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Bass_Rack_GainKnob.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/HustleDriveHP_Knob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/RevvG3_Pedal_GainKnob.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/recVintage_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Ethos_TWE_Pedal_GainKnob.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/MXR78_pedal_DistKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Sovtek50_ThroneTorcher_DIRECT.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ZenDrive_BlackMagic_DriveKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/YamahaT50_HighGain-mid4_DIRECT.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Splawn_OD_FractalFM3_HighGain.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/XComp_Pedal.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/YamahaT50_HighGain-mid6_DIRECT.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Sovtek50_StampedeDT_DIRECT.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Colombo_Plexi_Knob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BSIAB_II_KitPedal_GainKnob.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BluesBreakerClone_gainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/H&KBS200FL_LEAD_EdoardoNapoli.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Klone_Ge_G4_T5_O6.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Filmosound_with_cab.json",  Array.prNew(2),  
+	"/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/LittleBigMuff_HighGainPedal.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/JoyoAmericanSound.json",  Array.prNew(2),  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BadCat50_MedGain_DIRECT.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/recClean_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ProteinGreen_pedal_DriveKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DigitechDF-7_MetalMaster.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PeaveyBandit_Chan2_clean.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/RockmanAcoustic_Pedal.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DigitechDF-7_TS9.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/XoticBB_pedal_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ENGL_E645_Clean_EdoardoNapoli.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ElCoyote_Trainwreck_Clean.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BigMuffWicker_on.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ENGL_E430_Clean_EdoardoNapoli.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/FatGeneral_Comp.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Sovtek50_DodFX56B-2_DIRECT.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/JHS_AT_Pedal_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BossMT2_PedalHighGain.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ProteinBlue_pedal_DriveKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Mooer_CaliMkIV_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Bogner_EcstasyBlue_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DOD_AmericanMetal_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Gibson_EH-185.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PlexiBreed_JTM_pedal.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/ShiftTwin_Clean1_PREAMP.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/TS7_modified_HotMode.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/RockmanXPR_HighGain.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/PRS-Archon_Flat_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DumbleKit_LowG_DirectOut.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Barber_GC_GainKnob.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Landgraff_Pedal_GainKnob.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/Ibanez808TubeScreamer.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/AccessVirusB_DistortionHard.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/BadCat50_HighGain_PREAMP.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/RatsbaneStandardV1.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DODGrunge.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/AguilarAgro-Bright_Bass.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/DC3_Ge_G10_T6_L9.json",  
+	Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/SoundCity50_ThroneTorcher_DIRECT.json",  Array.prNew(2),  "/Users/spluta1/Documents/SC/LiveModularInstrument/LMI_Modules/Proteus/Proteus_tone_packs/TeaFuzz_Max.json"
+];
+p = [
+	// Dictionary
+	0, [ array: o[1],  size: 162 ],  
+	// Array
+	1, [ nil,  nil,  '32',  o[2],  
+		'90',  o[4],  '71',  o[6],  
+		'102',  o[8],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '16',  o[10],  
+		nil,  nil,  nil,  nil,  
+		'84',  o[12],  nil,  nil,  
+		nil,  nil,  '57',  o[14],  
+		'194',  o[16],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'163',  o[18],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'89',  o[20],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'35',  o[22],  '11',  o[24],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '208',  o[26],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'29',  o[28],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '114',  o[30],  
+		'58',  o[32],  '15',  o[34],  
+		'153',  o[36],  '226',  o[38],  
+		nil,  nil,  nil,  nil,  
+		'73',  o[40],  '76',  o[42],  
+		'101',  o[44],  nil,  nil,  
+		nil,  nil,  '67',  o[46],  
+		nil,  nil,  nil,  nil,  
+		'139',  o[48],  '129',  o[50],  
+		'198',  o[52],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'168',  o[54],  '14',  o[56],  
+		'135',  o[58],  '184',  o[60],  
+		'145',  o[62],  '49',  o[64],  
+		'24',  o[66],  '178',  o[68],  
+		'140',  o[70],  '202',  o[72],  
+		'104',  o[74],  '131',  o[76],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'154',  o[78],  nil,  nil,  
+		nil,  nil,  '23',  o[80],  
+		'96',  o[82],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '160',  o[84],  
+		nil,  nil,  nil,  nil,  
+		'8',  o[86],  '98',  o[88],  
+		nil,  nil,  nil,  nil,  
+		'37',  o[90],  '43',  o[92],  
+		nil,  nil,  '5',  o[94],  
+		'195',  o[96],  nil,  nil,  
+		'21',  o[98],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'193',  o[100],  nil,  nil,  
+		nil,  nil,  '180',  o[102],  
+		nil,  nil,  '162',  o[104],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'74',  o[106],  '240',  o[108],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'201',  o[110],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '113',  o[112],  
+		'152',  o[114],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'77',  o[116],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'39',  o[118],  '64',  o[120],  
+		'97',  o[122],  nil,  nil,  
+		'12',  o[124],  '41',  o[126],  
+		'52',  o[128],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'45',  o[130],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '68',  o[132],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '1',  o[134],  
+		'116',  o[136],  '136',  o[138],  
+		'144',  o[140],  nil,  nil,  
+		'100',  o[142],  nil,  nil,  
+		'25',  o[144],  nil,  nil,  
+		'120',  o[146],  '83',  o[148],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'177',  o[150],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'22',  o[152],  '42',  o[154],  
+		nil,  nil,  '46',  o[156],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'6',  o[158],  nil,  nil,  
+		nil,  nil,  '36',  o[160],  
+		nil,  nil,  '51',  o[162],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'132',  o[164],  '169',  o[166],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '200',  o[168],  
+		'18',  o[170],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'44',  o[172],  nil,  nil,  
+		'27',  o[174],  '161',  o[176],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '20',  o[178],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '148',  o[180],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'78',  o[182],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '106',  o[184],  
+		nil,  nil,  nil,  nil,  
+		'65',  o[186],  nil,  nil,  
+		'197',  o[188],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'138',  o[190],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'81',  o[192],  '60',  o[194],  
+		'137',  o[196],  nil,  nil,  
+		nil,  nil,  '86',  o[198],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'204',  o[200],  '165',  o[202],  
+		nil,  nil,  nil,  nil,  
+		'2',  o[204],  '17',  o[205],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '82',  o[207],  
+		'147',  o[209],  nil,  nil,  
+		nil,  nil,  '228',  o[211],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'69',  o[213],  '112',  o[215],  
+		'172',  o[217],  nil,  nil,  
+		nil,  nil,  '224',  o[219],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '212',  o[221],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '176',  o[223],  
+		nil,  nil,  '209',  o[225],  
+		nil,  nil,  nil,  nil,  
+		'216',  o[227],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'170',  o[229],  '33',  o[231],  
+		nil,  nil,  nil,  nil,  
+		'7',  o[233],  '26',  o[235],  
+		'80',  o[237],  nil,  nil,  
+		nil,  nil,  '99',  o[239],  
+		nil,  nil,  '72',  o[241],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '108',  o[243],  
+		nil,  nil,  nil,  nil,  
+		'92',  o[245],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'232',  o[247],  '10',  o[248],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'225',  o[250],  '142',  o[252],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '48',  o[254],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'133',  o[256],  nil,  nil,  
+		'149',  o[258],  '50',  o[260],  
+		nil,  nil,  '210',  o[262],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '56',  o[264],  
+		'66',  o[266],  '19',  o[268],  
+		nil,  nil,  '54',  o[270],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '70',  o[272],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '166',  o[274],  
+		'88',  o[276],  nil,  nil,  
+		'30',  o[278],  '141',  o[280],  
+		nil,  nil,  nil,  nil,  
+		'128',  o[282],  nil,  nil,  
+		'28',  o[284],  '40',  o[286],  
+		'75',  o[288],  '134',  o[290],  
+		'156',  o[292],  '192',  o[294],  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '150',  o[296],  
+		nil,  nil,  '130',  o[298],  
+		'53',  o[300],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		nil,  nil,  '13',  o[302],  
+		'105',  o[304],  nil,  nil,  
+		nil,  nil,  nil,  nil,  
+		'85',  o[306],  '3',  o[308],  
+		nil,  nil,  '9',  o[310],  
+		'146',  o[312],  nil,  nil,  
+		'38',  o[314],  '4',  o[316],  
+		'34',  o[318],  nil,  nil,  
+		'164',  o[320],  '196',  o[322],  
+		nil,  nil,  nil,  nil ],  
+	// Array
+	2, [ o[3],  0.5 ],  
+	// Array
+	4, [ o[5],  0.5 ],  
+	// Array
+	6, [ o[7],  0.5 ],  
+	// Array
+	8, [ o[9],  0.5 ],  
+	// Array
+	10, [ o[11],  0.5 ],  
+	// Array
+	12, [ o[13],  0.5 ],  
+	// Array
+	14, [ o[15],  0.5 ],  
+	// Array
+	16, [ o[17],  0.5 ],  
+	// Array
+	18, [ o[19],  0.5 ],  
+	// Array
+	20, [ o[21],  0.5 ],  
+	// Array
+	22, [ o[23],  0.5 ],  
+	// Array
+	24, [ o[25],  0.5 ],  
+	// Array
+	26, [ o[27],  0.5 ],  
+	// Array
+	28, [ o[29],  0.5 ],  
+	// Array
+	30, [ o[31],  0.5 ],  
+	// Array
+	32, [ o[33],  0.5 ],  
+	// Array
+	34, [ o[35],  0.5 ],  
+	// Array
+	36, [ o[37],  0.5 ],  
+	// Array
+	38, [ o[39],  0.5 ],  
+	// Array
+	40, [ o[41],  0.5 ],  
+	// Array
+	42, [ o[43],  0.5 ],  
+	// Array
+	44, [ o[45],  0.5 ],  
+	// Array
+	46, [ o[47],  0.5 ],  
+	// Array
+	48, [ o[49],  0.5 ],  
+	// Array
+	50, [ o[51],  0.5 ],  
+	// Array
+	52, [ o[53],  0.5 ],  
+	// Array
+	54, [ o[55],  0.5 ],  
+	// Array
+	56, [ o[57],  0.5 ],  
+	// Array
+	58, [ o[59],  0.5 ],  
+	// Array
+	60, [ o[61],  0.5 ],  
+	// Array
+	62, [ o[63],  0.5 ],  
+	// Array
+	64, [ o[65],  0.5 ],  
+	// Array
+	66, [ o[67],  0.5 ],  
+	// Array
+	68, [ o[69],  0.5 ],  
+	// Array
+	70, [ o[71],  0.5 ],  
+	// Array
+	72, [ o[73],  0.5 ],  
+	// Array
+	74, [ o[75],  0.5 ],  
+	// Array
+	76, [ o[77],  0.5 ],  
+	// Array
+	78, [ o[79],  0.5 ],  
+	// Array
+	80, [ o[81],  0.5 ],  
+	// Array
+	82, [ o[83],  0.5 ],  
+	// Array
+	84, [ o[85],  0.5 ],  
+	// Array
+	86, [ o[87],  0.5 ],  
+	// Array
+	88, [ o[89],  0.5 ],  
+	// Array
+	90, [ o[91],  0.5 ],  
+	// Array
+	92, [ o[93],  0.5 ],  
+	// Array
+	94, [ o[95],  0.5 ],  
+	// Array
+	96, [ o[97],  0.5 ],  
+	// Array
+	98, [ o[99],  0.5 ],  
+	// Array
+	100, [ o[101],  0.5 ],  
+	// Array
+	102, [ o[103],  0.5 ],  
+	// Array
+	104, [ o[105],  0.5 ],  
+	// Array
+	106, [ o[107],  0.5 ],  
+	// Array
+	108, [ o[109],  0.5 ],  
+	// Array
+	110, [ o[111],  0.5 ],  
+	// Array
+	112, [ o[113],  0.5 ],  
+	// Array
+	114, [ o[115],  0.5 ],  
+	// Array
+	116, [ o[117],  0.5 ],  
+	// Array
+	118, [ o[119],  0.5 ],  
+	// Array
+	120, [ o[121],  0.5 ],  
+	// Array
+	122, [ o[123],  0.5 ],  
+	// Array
+	124, [ o[125],  0.5 ],  
+	// Array
+	126, [ o[127],  0.5 ],  
+	// Array
+	128, [ o[129],  0.5 ],  
+	// Array
+	130, [ o[131],  0.5 ],  
+	// Array
+	132, [ o[133],  0.5 ],  
+	// Array
+	134, [ o[135],  0.5 ],  
+	// Array
+	136, [ o[137],  0.5 ],  
+	// Array
+	138, [ o[139],  0.5 ],  
+	// Array
+	140, [ o[141],  0.5 ],  
+	// Array
+	142, [ o[143],  0.5 ],  
+	// Array
+	144, [ o[145],  0.5 ],  
+	// Array
+	146, [ o[147],  0.5 ],  
+	// Array
+	148, [ o[149],  0.5 ],  
+	// Array
+	150, [ o[151],  0.5 ],  
+	// Array
+	152, [ o[153],  0.5 ],  
+	// Array
+	154, [ o[155],  0.5 ],  
+	// Array
+	156, [ o[157],  0.5 ],  
+	// Array
+	158, [ o[159],  0.5 ],  
+	// Array
+	160, [ o[161],  0.5 ],  
+	// Array
+	162, [ o[163],  0.5 ],  
+	// Array
+	164, [ o[165],  0.5 ],  
+	// Array
+	166, [ o[167],  0.5 ],  
+	// Array
+	168, [ o[169],  0.5 ],  
+	// Array
+	170, [ o[171],  0.5 ],  
+	// Array
+	172, [ o[173],  0.5 ],  
+	// Array
+	174, [ o[175],  0.5 ],  
+	// Array
+	176, [ o[177],  0.5 ],  
+	// Array
+	178, [ o[179],  0.5 ],  
+	// Array
+	180, [ o[181],  0.5 ],  
+	// Array
+	182, [ o[183],  0.5 ],  
+	// Array
+	184, [ o[185],  0.5 ],  
+	// Array
+	186, [ o[187],  0.5 ],  
+	// Array
+	188, [ o[189],  0.5 ],  
+	// Array
+	190, [ o[191],  0.5 ],  
+	// Array
+	192, [ o[193],  0.5 ],  
+	// Array
+	194, [ o[195],  0.5 ],  
+	// Array
+	196, [ o[197],  0.5 ],  
+	// Array
+	198, [ o[199],  0.5 ],  
+	// Array
+	200, [ o[201],  0.5 ],  
+	// Array
+	202, [ o[203],  0.5 ],  
+	// Array
+	204, [ o[109],  0.5 ],  
+	// Array
+	205, [ o[206],  0.5 ],  
+	// Array
+	207, [ o[208],  0.5 ],  
+	// Array
+	209, [ o[210],  0.5 ],  
+	// Array
+	211, [ o[212],  0.5 ],  
+	// Array
+	213, [ o[214],  0.5 ],  
+	// Array
+	215, [ o[216],  0.5 ],  
+	// Array
+	217, [ o[218],  0.5 ],  
+	// Array
+	219, [ o[220],  0.5 ],  
+	// Array
+	221, [ o[222],  0.5 ],  
+	// Array
+	223, [ o[224],  0.5 ],  
+	// Array
+	225, [ o[226],  0.5 ],  
+	// Array
+	227, [ o[228],  0.5 ],  
+	// Array
+	229, [ o[230],  0.5 ],  
+	// Array
+	231, [ o[232],  0.5 ],  
+	// Array
+	233, [ o[234],  0.5 ],  
+	// Array
+	235, [ o[236],  0.5 ],  
+	// Array
+	237, [ o[238],  0.5 ],  
+	// Array
+	239, [ o[240],  0.5 ],  
+	// Array
+	241, [ o[242],  0.5 ],  
+	// Array
+	243, [ o[244],  0.5 ],  
+	// Array
+	245, [ o[246],  0.5 ],  
+	// Array
+	247, [ o[135],  0.5 ],  
+	// Array
+	248, [ o[249],  0.5 ],  
+	// Array
+	250, [ o[251],  0.5 ],  
+	// Array
+	252, [ o[253],  0.5 ],  
+	// Array
+	254, [ o[255],  0.5 ],  
+	// Array
+	256, [ o[257],  0.5 ],  
+	// Array
+	258, [ o[259],  0.5 ],  
+	// Array
+	260, [ o[261],  0.5 ],  
+	// Array
+	262, [ o[263],  0.5 ],  
+	// Array
+	264, [ o[265],  0.5 ],  
+	// Array
+	266, [ o[267],  0.5 ],  
+	// Array
+	268, [ o[269],  0.5 ],  
+	// Array
+	270, [ o[271],  0.5 ],  
+	// Array
+	272, [ o[273],  0.5 ],  
+	// Array
+	274, [ o[275],  0.5 ],  
+	// Array
+	276, [ o[277],  0.5 ],  
+	// Array
+	278, [ o[279],  0.5 ],  
+	// Array
+	280, [ o[281],  0.5 ],  
+	// Array
+	282, [ o[283],  0.5 ],  
+	// Array
+	284, [ o[285],  0.5 ],  
+	// Array
+	286, [ o[287],  0.5 ],  
+	// Array
+	288, [ o[289],  0.5 ],  
+	// Array
+	290, [ o[291],  0.5 ],  
+	// Array
+	292, [ o[293],  0.5 ],  
+	// Array
+	294, [ o[295],  0.5 ],  
+	// Array
+	296, [ o[297],  0.5 ],  
+	// Array
+	298, [ o[299],  0.5 ],  
+	// Array
+	300, [ o[301],  0.5 ],  
+	// Array
+	302, [ o[303],  0.5 ],  
+	// Array
+	304, [ o[305],  0.5 ],  
+	// Array
+	306, [ o[307],  0.5 ],  
+	// Array
+	308, [ o[309],  0.5 ],  
+	// Array
+	310, [ o[311],  0.5 ],  
+	// Array
+	312, [ o[313],  0.5 ],  
+	// Array
+	314, [ o[315],  0.5 ],  
+	// Array
+	316, [ o[317],  0.5 ],  
+	// Array
+	318, [ o[319],  0.5 ],  
+	// Array
+	320, [ o[321],  0.5 ],  
+	// Array
+	322, [ o[323],  0.5 ]
+];
+prUnarchive(o,p);

@@ -41,26 +41,27 @@ AtdV_Mod : Module_Mod {
 
 	init {
 		this.makeWindow("AtdV", Rect(600, 645, 330, 240));
-		this.initControlsAndSynths(5);
+		this.initControlsAndSynths(6);
 
 		this.makeMixerToSynthBus(2);
 
-		synths = List.newClear(6);
+		synths = List.newClear(7);
 
 		throughGroup = Group.tail(group);
 		synthGroup = Group.tail(group);
 
 		volBusses = List.new;
-		5.do{ volBusses.add(Bus.control(group.server))};
+		6.do{ volBusses.add(Bus.control(group.server))};
 
 		buffers = List.new;
-		buffers.add(Buffer.read(group.server, "/Users/sam/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord3.aiff"));
-		buffers.add(Buffer.read(group.server, "/Users/sam/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord1.aiff"));
-		buffers.add(Buffer.read(group.server, "/Users/sam/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord4.aiff"));
-		buffers.add(Buffer.read(group.server, "/Users/sam/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord5.aiff"));
-		buffers.add(Buffer.read(group.server, "/Users/sam/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord2.aiff"));
+		buffers.add(Buffer.read(group.server, "/Users/spluta1/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord3.aiff"));
+		buffers.add(Buffer.read(group.server, "/Users/spluta1/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord1.aiff"));
+		buffers.add(Buffer.read(group.server, "/Users/spluta1/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord4.aiff"));
+		buffers.add(Buffer.read(group.server, "/Users/spluta1/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord5.aiff"));
+		buffers.add(Buffer.read(group.server, "/Users/spluta1/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/bigChord2.aiff"));
+		buffers.add(Buffer.read(group.server, "/Users/spluta1/Documents/WetInk/scoresElectronics/ATD V/useTheseChords/gingerMan.aiff"));
 
-		5.do{|i|
+		6.do{|i|
 			controls.add(EZSlider.new(win,Rect(65*i, 0, 60, 200), "vol", ControlSpec(0,1,'amp'),
 				{|v|
 					volBusses[i].set(v.value);
@@ -70,9 +71,8 @@ AtdV_Mod : Module_Mod {
 
 		onSynth = nil;
 
-		synths.put(5, Synth("AtdVMuter_mod", [\inBus, mixerToSynthBus.index, \outBus, outBus], throughGroup));
+		synths.put(6, Synth("AtdVMuter_mod", [\inBus, mixerToSynthBus.index, \outBus, outBus], throughGroup));
 
-//		4.do{|i|
 			noteOn = MIDIFunc.noteOn({ |value, num|
 					switch(num,
 						62, {
@@ -84,6 +84,9 @@ AtdV_Mod : Module_Mod {
 						65, {
 							synths.put(2, Synth("AtdVPlayer_mod", [\bufnum, buffers[2].bufnum, \outBus, outBus, \volBus, volBusses[2]], synthGroup));
 						},
+						67, {
+							synths.put(5, Synth("AtdVPlayer_mod", [\bufnum, buffers[5].bufnum, \outBus, outBus, \volBus, volBusses[5]], synthGroup));
+						},
 						69, {
 							synths.put(3, Synth("AtdVPlayer_mod", [\bufnum, buffers[3].bufnum, \outBus, outBus, \volBus, volBusses[3]], synthGroup));
 						},
@@ -91,7 +94,7 @@ AtdV_Mod : Module_Mod {
 							synths.put(4, Synth("AtdVPlayer_mod", [\bufnum, buffers[4].bufnum, \outBus, outBus, \volBus, volBusses[4]], synthGroup));
 						},
 						72, {
-							synths[5].set(\muteGate, 0)
+							synths[6].set(\muteGate, 0)
 						}
 					)
 				},
@@ -109,6 +112,9 @@ AtdV_Mod : Module_Mod {
 						65, {
 							synths[2].set(\gate, 0)
 						},
+						67, {
+							synths[5].set(\gate, 0)
+						},
 						69, {
 							synths[3].set(\gate, 0)
 						},
@@ -116,7 +122,7 @@ AtdV_Mod : Module_Mod {
 							synths[4].set(\gate, 0)
 						},
 						72, {
-							synths[5].set(\muteGate, 1)
+							synths[6].set(\muteGate, 1)
 						}
 					)
 				},

@@ -49,6 +49,8 @@ FM7aOS_NNMod : NN_Synth_Mod {
 
 				out = MoogVCF2.ar(out, filtFreq, filtRes);
 
+				//out = VAMoogLadderOS.ar(out, filtFreq, filtRes, 3);
+
 				//in every synth
 				onOffSwitch = (\onOff0.kr(0, 0.01)+\onOff1.kr(0, 0.01)).clip(0,1);
 				onOffSwitch = Select.kr(\switchState.kr(0), [\isCurrent.kr(0, 0.01), \isCurrent.kr*onOffSwitch, onOffSwitch]);

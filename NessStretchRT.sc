@@ -4,17 +4,18 @@ NessyObject_Mod {
 
 	*initClass {
 		StartUp.add {
-			SynthDef("play_nessie_mod", {|outBus, buf0a, buf0b, /*buf1a, buf1b, */volBus, speedBus, rate=1, gate=1, pauseGate=1, muteGate=1|
+			SynthDef("play_nessie_mod", {|outBus, buf0a, buf0b, volBus, speedBus, rate=1, gate=1, pauseGate=1, muteGate=1|
 
 				var env = EnvGen.kr(Env.asr(0.01, 1, 4), gate, doneAction:2);
 				var sound, pauseEnv, muteEnv;
 
 				var speed = In.kr(speedBus);
-				var imp = Impulse.kr(1/(Rand(BufDur.kr(buf0a)-4, BufDur.kr(buf0a))/speed));
+				var dur = Rand(BufDur.kr(buf0a)-4, BufDur.kr(buf0a));
+				var imp = Impulse.kr(1/(dur-2.5/speed));
 				var vol = In.kr(volBus).lag(0.2);
 
-				sound = [TGrains2.ar(1, imp, buf0a, speed, BufDur.kr(buf0a)/2, BufDur.kr(buf0a)/speed, 0, 1, 2, 2),
-					TGrains2.ar(1, imp, buf0b, speed, BufDur.kr(buf0a)/2, BufDur.kr(buf0a)/speed, 0, 1, 2, 2)];
+				sound = [TGrains2.ar(1, imp, buf0a, speed, dur/2, dur/speed, 0, 1, 2, 2),
+					TGrains2.ar(1, imp, buf0b, speed, dur/2, dur/speed, 0, 1, 2, 2)];
 
 				pauseEnv = EnvGen.kr(Env.asr(0,1,0), pauseGate, doneAction:1);
 				muteEnv = EnvGen.kr(Env.asr(0,1,0), muteGate, doneAction:0);
@@ -69,11 +70,8 @@ NessyObject_Mod {
 
 		oneNDone = 0;
 		twoNDone = 0;
-		parent.lastBuffer.postln;
 		parent.lastBuffer.write(shortFileA, "wav", completionMessage:{
 			{
-				//if(group.server.sampleRate)
-				"do the stretch".postln;
 
 				("/Users/spluta1/Library/Application Support/SuperCollider/Extensions/MyPlugins/TimeStretch/rust/target/release/ness_stretch".quote+"-d 100 -v 0 -s 8 -b 8 -f "++shortFileA.quote+"-o"+outFileA.quote).unixCmd(
 					action:{|msg|
@@ -89,7 +87,6 @@ NessyObject_Mod {
 							group.server.sync;
 							("rm "++outFileA.quote).unixCmd;
 							synths[nextSynth] = Synth("play_nessie_mod", [\buf0a, bufs[currentBufs][0], \buf0b, bufs[currentBufs][1], \outBus, outBus, \volBus, volBus, \speedBus, speedBus], group);
-							synthSwitch.postln;
 							if (synthSwitch[nextSynth] == 0){
 								synths[nextSynth].set(\gate, 0);
 								synths[nextSynth]=nil;
@@ -107,13 +104,10 @@ NessyObject_Mod {
 		if (zVal==1){
 			if(running==false){
 				running = true;
-				"makeAndPlay".postln;
 				this.makeAndPlayLoop;
 			}
 		}{
-			"zval 0".postln;
 			if(lockVal==0){
-				"gate 0".postln;
 				running = false;
 				(0..3).do{|num|
 					if(synths[num]!=nil){
@@ -231,9 +225,8 @@ NessStretchRT_Mod : SignalSwitcher_Mod {
 
 			lastRecordedBuffer = msg[2];
 
-			recBufs[lastRecordedBuffer].normalize;//.collect{|item| item.normalize};
+			recBufs[lastRecordedBuffer].normalize;
 			lastBuffer = recBufs[lastRecordedBuffer];
-			//lastBuffer.postln;
 
 		},'/tr', group.server.addr);
 

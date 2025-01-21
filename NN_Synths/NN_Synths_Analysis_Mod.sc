@@ -63,12 +63,7 @@ NN_Synths_Analysis_Mod : NN_Synth_Mod {
 		var order;
 		analysisRout = Routine({{
 			if(parent.predictOnOff==1){
-				//"doit".postln;
 				analysisBus.getn(7, {|vals|
-/*					if(vals[0]<minCentroid){minCentroid = vals[0]};
-					if(vals[0]>maxCentroid){maxCentroid = vals[0]};
-					centroid01 = vals[0].linlin(minCentroid, maxCentroid, 0.0, 1.0, \minmax).postln;
-					ringAnalyzer.setXYWin(centroid01,0);*/
 					order = whichMLP8.order.reverse;
 					which2MLPs = order.copyRange(0,1);
 					ringAnalyzer.analyzeMe(vals, [mlps[which2MLPs[0]], mlps[which2MLPs[1]]], [whichMLP8[order[0]], whichMLP8[order[1]]]);

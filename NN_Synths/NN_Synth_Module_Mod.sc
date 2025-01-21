@@ -2,14 +2,14 @@ NN_Synth_ID {
 	classvar <id=5000;
 	*initClass { id = 5000; }
 	*next  { ^id = id + 1; }
-	*path {this.filenameSymbol.postln}
+	*path {this.filenameSymbol}
 }
 
 NN_Synth_DataSetID {
 	classvar <id=5000;
 	*initClass { id = 5000; }
 	*next  { ^id = id + 1; }
-	*path {this.filenameSymbol.postln}
+	*path {this.filenameSymbol}
 }
 
 Kill_The_Pythons {
@@ -59,9 +59,13 @@ NN_Synth_Mod : Module_Mod {
 			mlps = List.fill(8, {FluidMLPRegressor(group.server,[3,3],2,1,0,-1,1000,0.1,0.1,1,0)});
 		};
 
-		setLemurSpeedLimit = SpeedLimit({|array| parent.setLemur(array)}, 0.05);
-		setSlidersSpeedLimit = SpeedLimit({|array| this.setSliders(array)}, 0.2);
-		mlpInBusSpeedLimit = SpeedLimit({|array| this.setMLPInBusses(array)}, 0.01);
+		// setLemurSpeedLimit = SpeedLimit({|array| parent.setLemur(array)}, 0.05);
+		// setSlidersSpeedLimit = SpeedLimit({|array| this.setSliders(array)}, 0.2);
+		// mlpInBusSpeedLimit = SpeedLimit({|array| this.setMLPInBusses(array)}, 0.01);
+
+		setLemurSpeedLimit = {|array| parent.setLemur(array)};
+		setSlidersSpeedLimit = {|array| this.setSliders(array)};
+		mlpInBusSpeedLimit = {|array| this.setMLPInBusses(array)};
 
 		updateSlidersRout = Routine({inf.do{
 			if(isCurrentUpdateLemur==1){
@@ -160,7 +164,6 @@ NN_Synth_Mod : Module_Mod {
 		};
 
 		whichModel = 0;
-		nameIn.postln;
 
 		synthArgs = [nameIn, outBus, volBus.index, onOff0, onOff1, chanVolBus];
 		if(nameIn!="NN_Prototype_NNMod"){
@@ -173,7 +176,6 @@ NN_Synth_Mod : Module_Mod {
 		{
 			synths.do{|item| item.free};
 			group.server.sync;
-			synthArgs.postln;
 			synths.put(0, Synth(synthArgs[0], [\outBus, synthArgs[1], \volBus, synthArgs[2], \onOff0, synthArgs[3]-1, \onOff1, synthArgs[4]-1, \chanVolBus, synthArgs[5], \dataInBus, mlpSumBus/*mlpOutBusses[whichModel]*/], synthGroup));
 		}.fork;
 	}
@@ -214,15 +216,11 @@ NN_Synth_Mod : Module_Mod {
 		allValsList.put(whichModel, valsList.addAll(controlValsList));
 		mlpSynths[whichModel].set(\mlpOnOff, 0);
 		mlpSynths.do{|synth, i2|
-			synth.set(\mlpOnOff, onOffEnvs[i2][i].post);
-			" ".post;
+			synth.set(\mlpOnOff, onOffEnvs[i2][i]);
 		};
 		mlpSumSynth.set(\whichMLPBus, i);
-		//mlpSynths[whichModel].run(false);
-		whichModel = mlpSelectEnv[i].postln;
+		whichModel = mlpSelectEnv[i];
 		mlpSynths[whichModel].set(\mlpOnOff, 1);
-		//mlpSynths[whichModel].run(true);
-		//synths[0].set(\dataInBus, mlpOutBusses[whichModel]);
 		valsList = allValsList[whichModel].copyRange(0,sizeOfNN-1);
 		this.setSlidersAndSynth(valsList);
 	}
@@ -246,8 +244,7 @@ NN_Synth_Mod : Module_Mod {
 
 	setNNInputVals {|vals|
 		controlValsList = vals;
-		//mlpInBuf.setn(0, vals);
-		//this.configure;
+
 		if(parent.predictOnOff==1){
 			mlpInBusSpeedLimit.value(vals);
 		}
@@ -389,8 +386,8 @@ NN_Synth_Mod : Module_Mod {
 		outDataSet.print;
 
 		mlps[whichModel].fit(inDataSet,outDataSet,{|x|
-			"trainy trainy trainy".postln;
-			(modelFolder++"/"++"modelFile"++whichModel++".json").postln;
+			"train it!".postln;
+			(modelFolder++"/"++"modelFile"++whichModel++".json");
 			mlps[whichModel].write(modelFolder++"/"++"modelFile"++whichModel++".json");
 			inDataSet.write(modelFolder++"/"++"inDataSet"++whichModel++".json");
 			outDataSet.write(modelFolder++"/"++"outDataSet"++whichModel++".json");
@@ -486,7 +483,6 @@ NN_Synth_Mod : Module_Mod {
 		keys = List[];
 
 		currentPoint = 0;
-		controlValsList.postln;
 
 
 		{
@@ -544,21 +540,16 @@ NN_Synth_Mod : Module_Mod {
 
 		inDataSet.deletePoint(cp, {
 			inDataSet.print;
-			"now delete the out point".postln;
 			outDataSet.deletePoint(cp, {
 				outDataSet.print;
 				"outPoint removed".postln;
-				keys.postln;
 				keys.removeAt(currentPoint);
-				keys.postln;
 				currentPoint = currentPoint.wrap(0, keys.size-1);
 		})});
 	}
 
 	nextPoint {
 		var key;
-		keys.postln;
-		currentPoint.postln;
 
 		if(keys.size>0){
 			currentPoint = (currentPoint+1).wrap(0, keys.size-1);

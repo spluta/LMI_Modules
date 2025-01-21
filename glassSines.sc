@@ -378,6 +378,11 @@ GlassSines_Mod : Module_Mod {
 		win.close;
 	}
 
+	// //overriding the load because there is a problem
+	// load {
+
+	// }
+
 	saveExtra {arg saveArray;
 		var temp;
 

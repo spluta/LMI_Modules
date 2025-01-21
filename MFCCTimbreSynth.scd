@@ -56,7 +56,6 @@ MFCCTimbreSynth_Mod :  TypeOSCModule_Mod {
 
 			{arg val; vol0 = val; if(synthGates[0]==1){synths[0].set(\vol, val.linlin(0,1,0,1))}},
 			{arg val;
-				"zee".postln;
 				synthGates.put(0, val);
 				if(val==1){
 					this.getMatch;
@@ -80,7 +79,6 @@ MFCCTimbreSynth_Mod :  TypeOSCModule_Mod {
 				}
 			},
 			{arg val;
-				"why".postln;
 				this.getMatch;
 				synthGates.put(2, 1);
 				synths.put(2, Synth("mfccHarmonySynth_mod", [\outBus, outBus, \buffer0, buf[0], \buffer1, buf[1], \volBus, volBus, \vol, 0.8], playGroup))
@@ -132,14 +130,10 @@ MFCCTimbreSynth_Mod :  TypeOSCModule_Mod {
 		if(synthGates[2]==1){synths[2].set(\gate, 0)};
 		synthGates.put(2,0);
 		match = goalNode.getMFCCMatch;
-		//match.postln;
 		buf = matchNodes[match[0]].monoBufs[match[1].asInteger];
-		//buf[0].bufnum.postln;
 	}
 
 	loadFolder {arg mainFolder;
-		"load the samples".postln;
-		mainFolder.postln;
 
 		try {
 		mainFolder = PathName(mainFolder);
@@ -153,21 +147,16 @@ MFCCTimbreSynth_Mod :  TypeOSCModule_Mod {
 				var file;
 
 				file = folder.fullPath++folder.folderName++".wav";
-				//file.postln;
 				matchNodes.add(FluidAnalysisNode(group.server, matchGroup, file, ccfBus, mfccBus).loadSegments.loadAnalysis);
 				group.server.sync;
-				//1.wait;
 				goalNode.matchNodes_(matchNodes);
 				matchNodes.do{|item| item.makeCCFAnalysisSynth; item.makeMFCCAnalysisSynth};
 			};
 			group.server.sync;
 			1.0.wait;
-			"loading goalNode".postln;
-			//goalNode = FluidMatchAndPlay(group.server, goalGroup, inBus, matchNodes, ccfBus, mfccBus);
 		}.fork;
 			}{"not a folder".postln; controls[7].textField.value_("");}
 		}{
-			"try failed".postln;
 			controls[7].textField.value_("");
 		}
 	}
@@ -177,7 +166,6 @@ MFCCTimbreSynth_Mod :  TypeOSCModule_Mod {
 	}
 
 	loadExtra {arg extra;
-			extra.postln;
 		{
 			5.wait;
 			mainFolderField.valueAction_(extra);

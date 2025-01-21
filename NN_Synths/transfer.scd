@@ -15,11 +15,9 @@
 			[\filtModFreq, ControlSpec(0, 30, \lin)],
 	[\filtModAmp, ControlSpec(0, 1, \amp)]].do{|item, i|
 
-	//item[1].postln;
 	if(item[1].warp.isKindOf(ExponentialWarp))
 	{
 		("var "++item[0].asString++" = mlpVals["++i++"].linexp(0,1,"++item[1].clipLo++","++item[1].clipHi++");").postln
-
 	}{
 		("var "++item[0].asString++" = mlpVals["++i++"].linlin(0,1,"++item[1].clipLo++","++item[1].clipHi++");").postln
 	}

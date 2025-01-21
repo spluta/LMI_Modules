@@ -120,7 +120,6 @@ MantaBuffers_Mod : Module_Mod {
 				setups);
 			MidiOscControl.setControllerNoGui(group.server, oscMsgs[i+48],
 				{
-					"noteOff".postln;
 					trigRates.put(i, 0);
 					synth[1].set(\trigRate, trigRates)
 				},

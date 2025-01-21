@@ -12,13 +12,14 @@ LowPass_Mod : Module_Mod {
 				sound = In.ar(inBus, 2);
 
 				filt0 = LPF.ar(sound, filterFreq);
-				filt1 = LPF.ar(filt0, 400);
-				filt2 = LPF.ar(filt1, 400);
+				filt1 = LPF.ar(filt0, filterFreq);
+				filt2 = LPF.ar(filt1, filterFreq);
 				sound=SelectX.ar(which, [
 					filt0,
 					filt1,
 					filt2
 				]);
+
 
 				Out.ar(outBus, sound*env*pauseEnv);
 			}).writeDefFile;

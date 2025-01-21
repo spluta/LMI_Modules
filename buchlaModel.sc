@@ -111,8 +111,6 @@ BuchlaFilter_Mod {
 	trigger {arg lowDb, highDb, rqVal=1, lagTime = 0.05;
 		var randDB, qSet;
 
-		"lilTrig".postln;
-
 		randDB = rrand(lowDb, highDb);
 		if(rqVal<0){
 			qSet = 1;
@@ -128,7 +126,6 @@ BuchlaFilter_Mod {
 	}
 
 	setDBNoiseOnOff {|dbNoiseOnOff|
-		"set dbNoiseOnOff".postln;
 		filter.set(\dbNoiseOnOff, dbNoiseOnOff);
 	}
 
@@ -178,14 +175,12 @@ BuchlaFiltersSynths_Mod {
 	}
 
 	trigger {arg num;
-		"trigger".postln;
 		if(num==nil, {num = 6});
 		filterList.do{arg item; item.trigger(num.neg,num, 1, 0.05)};
 		^filterSettingArray
 	}
 
 	setDBFreqRange {arg dbFreq, dbRange;
-		[dbFreq, dbRange].postln;
 		filterList.do{arg filter; filter.setDBFreqRange(dbFreq, dbRange)};
 	}
 

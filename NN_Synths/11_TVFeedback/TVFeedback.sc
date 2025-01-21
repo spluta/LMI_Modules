@@ -38,14 +38,12 @@ TVFeedback_NNMod : NN_Synth_Mod {
 
 				audioOut = LPF.ar(LPF.ar(IFFT(PV_BrickWall(FFT(LocalBuf(256), sig), -0.5)), 10000), 10000);
 
-				//in every synth
-/*				onOffSwitch = (\onOff0.kr(0, 0.01)+\onOff1.kr(0, 0.01)).clip(0,1);
-				onOffSwitch = Select.kr(\switchState.kr(0), [\isCurrent.kr(0, 0.01), \isCurrent.kr*onOffSwitch, onOffSwitch]);
-				out = out*Lag.kr(In.kr(\volBus.kr), 0.05).clip(0,1)*onOffSwitch*Lag.kr(In.kr(\chanVolBus.kr), 0.05).clip(0,1);
-				envs = Envs.kr(\muteGate.kr(1), \pauseGate.kr(1), \gate.kr(1));*/
-
-
-				Out.ar(\outBus.kr(0), [sig*tvVol*Lag.kr(In.kr(\volBus.kr), 0.1),audioOut*Lag.kr(In.kr(\volBus.kr), 0.1)]);
+				//audio out - channel 1
+				//TV - chan 2
+				Out.ar(\outBus.kr(0), [
+					audioOut*Lag.kr(In.kr(\volBus.kr), 0.1),
+					sig*tvVol*Lag.kr(In.kr(\volBus.kr), 0.1)
+				]);
 			//}).load(ModularServers.servers[\lmi1].server))
 			}).writeDefFile;)
 		}

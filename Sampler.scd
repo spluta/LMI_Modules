@@ -18,8 +18,6 @@ e.duration
 
 e.save("/Users/nickcollins/Desktop/a11wlk01.scmirZ")    //save .scmirZ files using ZArchive; binary storage of feature data and other instance variables
 
-e.featuredata.do{arg item; item.postln}
-
 e.numfeatures
 
 e.numframes
@@ -30,7 +28,6 @@ Routine({inf.do{
 	var num, dur;
 
 	num = a.size.rand;
-	num.postln;
 	if(num!=(a.size-1),{dur = a[num+1]-a[num]},{dur = b.duration-a[num]});
 	{PlayBuf.ar(2, b, 1, 1, a[num]*b.sampleRate, 0, 0)*EnvGen.kr(Env.new([0,1,1,0], [0.01, dur-0.02, 0.01]), doneAction:2)}.play;
 	(dur-0.02).wait;

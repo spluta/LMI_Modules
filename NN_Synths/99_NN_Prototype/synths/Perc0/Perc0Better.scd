@@ -6,7 +6,8 @@ p = ProxySpace.push(s);
 ~out.play
 ~out2.play
 
-(SynthDef("Perc0_NNSynth",{
+(
+	SynthDef("Perc0_NNSynth",{
 var maths1, maths1Rise, mathsTrig, endOfCycle, maths2, maths2Rise, maths3, noiseMaths, noiseMathsRise, oscNoise, noise, out, out2, env, envB, oscWobble, onOffSwitch, envs, trigEnv;
 
 	onOffSwitch = (\onOff0.kr(1, 0.01)+\onOff1.kr(1, 0.01)).clip(0,1);
@@ -47,7 +48,8 @@ var maths1, maths1Rise, mathsTrig, endOfCycle, maths2, maths2Rise, maths3, noise
 	out = (out+out2+noise)*envs*Lag.kr(In.kr(\volBus.kr), 0.05).clip(0,1)*trigEnv;
 
 	Out.ar(\outBus.kr(0), out)
-}).load(ModularServers.servers[\lmi1].server))
+}).load(ModularServers.servers[\lmi1].server)
+)
 
 
 a.set(\maths1Freq, 5)

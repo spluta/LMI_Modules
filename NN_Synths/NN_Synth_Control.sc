@@ -90,18 +90,18 @@ NN_Synth_Control_NNMod :  Module_Mod {
 	}
 
 	setLabels {arg labelsIn;
-		labelsIn.do{arg item, i;
-			//Lemur_Mod.netAddrs.do{arg addr; addr.sendMsg(labels[i].string.asSymbol, "@content", item)};
-			OSCReceiver_Mod.netAddrs.do{arg addr;
-				addr.sendMsg(labels[i].string.asSymbol, item);
-
-			};
-		};
+		
+		// labelsIn.do{arg item, i;
+		// 	OSCReceiver_Mod.netAddrs.do{arg addr;
+		// 		if(addr!=nil){
+		// 			addr.sendMsg(labels[i].string.asSymbol, item);
+		// 		}
+		// 	};
+		// };
 	}
 
 	setLemurRange{|i, val|
 		OSCReceiver_Mod.sendOSC(oscMsgs[i].asString.copyRange(0, oscMsgs[i].size-3), val);
-		//Lemur_Mod.sendOSC(oscMsgs[i], val);
 	}
 
 	setLemur{|vals|

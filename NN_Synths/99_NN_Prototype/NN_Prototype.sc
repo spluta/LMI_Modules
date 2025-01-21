@@ -34,7 +34,6 @@ PrototypeElement {
 	}
 
 	setElements {arg vals;
-		vals.postln;
 		vals = vals.collect{|item, i| if(i==0){item.asString}{item.asFloat}};
 		msgBox.valueAction_(vals[0]);
 		onOffButton.valueAction_(1);
@@ -106,7 +105,6 @@ NN_Prototype_NNMod : NN_Synth_Mod {
 		.states_([["reloadSynth", Color.black, Color.yellow]])
 		.action_{
 			if(synths[0]!=nil, {synths[0].set(\gate, 0)});
-			synths.postln;
 			synths.put(0, Synth(synthName, [\outBus, outBus, \volBus, volBus.index, \onOff0, onOff0-1, \onOff1, onOff1-1], group));
 		};
 
@@ -142,13 +140,8 @@ NN_Prototype_NNMod : NN_Synth_Mod {
 				PrototypeElement()
 				.nnVals_(nnVals).location_(i).parent_(this)
 				.action_{arg val;
-					val.value.postln;
-					//if(i<sizeOfNN){
-						controlBusses[0].setAt(i, [val.value]);
-						valsList.put(i, val.value);
-						//synths[0].set(nnVals[i][0].asSymbol, proto.value);
-						//{valsList.put(i, proto.controlSpec.unmap(proto.value))}.defer;
-					//}
+					controlBusses[0].setAt(i, [val.value]);
+					valsList.put(i, val.value);
 				}
 			)
 		};

@@ -406,7 +406,7 @@ NN_Synths_Mod : Module_Mod {
 			if(temp!=nil){
 				temp = temp.asString;
 
-				Lemur_Mod.sendSwitchOSC(temp);
+				//Lemur_Mod.sendSwitchOSC(temp);
 
 				OSCReceiver_Mod.sendOSC(
 					temp.copyRange(0, temp.size-3),

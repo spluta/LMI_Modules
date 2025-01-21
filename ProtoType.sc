@@ -52,10 +52,8 @@ ProtoType_Mod :  Module_Mod {
 		presetPopUp = PopUpMenu();
 		presetPopUp.items = [nil].addAll(savedProtos.flop[0]);
 		presetPopUp.action = {arg menu;
-			menuNumber = menu.value.postln;
 			if(menu.value>0){
-				savedProtos.postln;
-				controls[0].string = savedProtos.flop[1][menu.value-1].postln;
+				controls[0].string = savedProtos.flop[1][menu.value-1];
 			}
 		};
 

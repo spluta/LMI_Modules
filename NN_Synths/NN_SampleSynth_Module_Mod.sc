@@ -7,7 +7,7 @@ FluidName_ID {
 	classvar <id=1000;
 	*initClass { id = 1000; }
 	*next  { ^id = id + 1; }
-	*path {this.filenameSymbol.postln}
+	*path {this.filenameSymbol}
 }
 
 NN_SampleSynth_Mod : NN_Synth_Mod {
@@ -36,11 +36,8 @@ NN_SampleSynth_Mod : NN_Synth_Mod {
 		valsList = controlValsList;
 
 		startPoint = whichModel*3;
-
 		2.do{|i| valsList.put(i, nnVals[startPoint+i][1].map(valsList[i]+addRandomVal))};
-
 		treeInBuffer.setn(0, valsList.copyRange(0,2).asArray);
-
 		if(synths[0]!=nil){synths[0].set(\dur, nnVals[startPoint+2][1].map(valsList[2]))};
 	}
 

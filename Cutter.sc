@@ -7,21 +7,20 @@ Cutter_Mod : Module_Mod {
 				var in, trateTemp, trate, dur, xPos, clk, pointClk, point, point0, point1, point2, point3, point4, point5, point6, point7, phasor, env, pauseEnv, vol;
 
 				vol = In.kr(volBus);
-				trateTemp = LFNoise2.kr(LFNoise2.kr(0.5, 1.5, 2)).range(lowRate, highRate);
+				trateTemp = LFNoise2.kr(LFNoise2.kr(0.5, 1.5, 2)).range(lowRate, highRate);  //trate is always changing
 				trate = Select.kr(onOff, [trateTemp, 0]);
 
 				dur = (1 / trateTemp)*overlap;
-
-				clk = Impulse.kr(trate);
+				clk = Impulse.kr(trate);  //this is the trigger
 
 				phasor = Phasor.ar(0, BufRateScale.kr(bufnum), 0, BufFrames.kr(bufnum));
 
 				in = In.ar(inBus);
+				BufWr.ar(in, bufnum, phasor, 1); //always writing into the buffer
 
-				BufWr.ar(in, bufnum, phasor, 1);
+				xPos = (phasor/SampleRate.ir);  //xPos is the time into the buffer
 
-				xPos = (phasor/SampleRate.ir);
-
+				//this breaks the trigger into 8 sequential triggers
 				pointClk = Select.kr(pointClkFreeze, [clk, 0]);
 
 				point0 = Latch.kr(xPos, PulseDivider.kr(pointClk, 8, 0));
@@ -33,13 +32,19 @@ Cutter_Mod : Module_Mod {
 				point6 = Latch.kr(xPos, PulseDivider.kr(pointClk, 8, 6));
 				point7 = Latch.kr(xPos, PulseDivider.kr(pointClk, 8, 7));
 
+				//on each trigger, choose a point to grab onto
+				//this seems wrong
 				point = TWChoose.kr(clk, [point0,point1,point2,point3], [LFNoise0.kr(0.5, 0.5,1), LFNoise0.kr(0.5, 0.5,1), LFNoise0.kr(0.5, 0.5,1),LFNoise0.kr(0.5, 0.5,1), LFNoise0.kr(0.5, 0.5,1), LFNoise0.kr(0.5, 0.5,1),LFNoise0.kr(0.5, 0.5,1), LFNoise0.kr(0.5, 0.5,1)].normalizeSum);
 
+				//when in mode 2, latch onto the current point
 				point = Select.kr(latchPoint, [point, Latch.kr(point, latchPoint)]);
 
 				env = EnvGen.kr(Env.asr(0.1,1,0.1), gate, doneAction:2);
 				pauseEnv = EnvGen.kr(Env.asr(0.1,1,0.1), pauseGate, doneAction:1);
 
+				//the latch point is the center of the grain in TGrains
+				//the dur is 1/trigRate*overlap
+				//the pan point is a random triggered value
 				Out.ar(outBus, TGrains.ar(2, clk, bufnum, 1.0, point, dur, TRand.kr(-1, 1, clk), 1, 4)*vol*env*pauseEnv);
 			}).writeDefFile;
 		}
@@ -65,7 +70,7 @@ Cutter_Mod : Module_Mod {
 			});
 			this.addAssignButton(0, \onOff);
 
-			controls.add(Button.new()
+			controls.add(Button()
 				.states_([["on", Color.blue, Color.black ],["on", Color.black, Color.red ]])
 				.action_{|v|
 					4.do{arg i; controls[i].value = 0};
